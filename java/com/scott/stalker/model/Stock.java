@@ -72,6 +72,8 @@ public class Stock {
 	}
 
 	public BigDecimal getOriginalPrice() {
+		if (originalPrice != null) 
+			return originalPrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return originalPrice;
 	}
 
@@ -90,6 +92,8 @@ public class Stock {
 	}
 
 	public BigDecimal getFinalPrice() {
+		if (finalPrice != null) 
+			return finalPrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return finalPrice;
 	}
 
@@ -155,6 +159,8 @@ public class Stock {
 	}
 
 	public BigDecimal getSoldPrice() {
+		if (soldPrice != null) 
+			return soldPrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return soldPrice;
 	}
 
@@ -221,6 +227,8 @@ public class Stock {
 	}
 
 	public BigDecimal getExpectWholesalePrice() {
+		if (expectWholesalePrice != null) 
+			return expectWholesalePrice.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return expectWholesalePrice;
 	}
 

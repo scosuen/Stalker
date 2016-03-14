@@ -44,7 +44,7 @@ public class PivotTableController {
 	 * @param CAD2CNY
 	 * @return
 	 */
-	@RequestMapping(value = "/itemProfit/{userName}/{accessToken}", method = RequestMethod.GET)
+	@RequestMapping(value = "/itemProfit/{userName}/{accessToken}", produces="text/html;charset=UTF-8", method = RequestMethod.GET)
 	public String itemProfit (@PathVariable("userName") String userName 
 			, @PathVariable("accessToken") String accessToken
 			, @RequestParam("startDate") String startDate
@@ -122,7 +122,7 @@ public class PivotTableController {
 	}
 	
 
-	@RequestMapping(value = "/inventory/{userName}/{accessToken}", method = RequestMethod.GET)
+	@RequestMapping(value = "/inventory/{userName}/{accessToken}", produces="text/html;charset=UTF-8", method = RequestMethod.GET)
 	public String inventory (@PathVariable("userName") String userName, @PathVariable("accessToken") String accessToken) {
 		//validate user
 		User user = new User();

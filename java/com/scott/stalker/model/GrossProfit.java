@@ -11,6 +11,8 @@ public class GrossProfit {
 	private BigDecimal grossProfit;
 
 	public BigDecimal getTurnOver() {
+		if (turnOver != null) 
+			return turnOver.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return turnOver;
 	}
 
@@ -27,6 +29,8 @@ public class GrossProfit {
 	}
 
 	public BigDecimal getPurchasedTotal() {
+		if (purchasedTotal != null) 
+			return purchasedTotal.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return purchasedTotal;
 	}
 
@@ -43,6 +47,8 @@ public class GrossProfit {
 	}
 
 	public BigDecimal getGrossProfit() {
+		if (grossProfit != null) 
+			return grossProfit.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return grossProfit;
 	}
 

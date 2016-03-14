@@ -37,6 +37,8 @@ public class CustomerSpending {
 		this.customerName = customerName;
 	}
 	public BigDecimal getSpending() {
+		if (spending != null) 
+			return spending.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return spending;
 	}
 	public void setSpending(BigDecimal spending) {

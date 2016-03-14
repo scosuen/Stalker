@@ -70,6 +70,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getFinalPriceMin() {
+		if (finalPriceMin != null) 
+			return finalPriceMin.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return finalPriceMin;
 	}
 
@@ -78,6 +80,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getFinalPriceAvg() {
+		if (finalPriceAvg != null) 
+			return finalPriceAvg.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return finalPriceAvg;
 	}
 
@@ -86,6 +90,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getFinalPriceMax() {
+		if (finalPriceMax != null) 
+			return finalPriceMax.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return finalPriceMax;
 	}
 
@@ -94,6 +100,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getSoldPriceMin() {
+		if (soldPriceMin != null) 
+			return soldPriceMin.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return soldPriceMin;
 	}
 
@@ -102,6 +110,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getSoldPriceAvg() {
+		if (soldPriceAvg != null) 
+			return soldPriceAvg.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return soldPriceAvg;
 	}
 
@@ -110,6 +120,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getSoldPriceMax() {
+		if (soldPriceMax != null) 
+			return soldPriceMax.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return soldPriceMax;
 	}
 
@@ -204,6 +216,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getFinalPriceSum() {
+		if (finalPriceSum != null) 
+			return finalPriceSum.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return finalPriceSum;
 	}
 
@@ -212,6 +226,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getSoldPriceSum() {
+		if (soldPriceSum != null) 
+			return soldPriceSum.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return soldPriceSum;
 	}
 
@@ -220,6 +236,8 @@ public class ItemProfit {
 	}
 
 	public BigDecimal getAverageProfitCNY() {
+		if (averageProfitCNY != null) 
+			return averageProfitCNY.setScale(2, BigDecimal.ROUND_HALF_UP);
 		return averageProfitCNY;
 	}
 

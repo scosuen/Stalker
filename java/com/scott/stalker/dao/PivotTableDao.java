@@ -40,7 +40,7 @@ public class PivotTableDao {
 	
 	public List<Inventory> inventory() {
 		StringBuffer sql = new StringBuffer();
-		sql.append(" match (s:stock {status:'stockIn'}) return distinct s.brand as brand, s.product as product, count(*) as quantity");
+		sql.append(" match (s:stock {status:'stockIn'}) return distinct s.brand as brand, s.product as product, count(*) as quantity order by quantity desc");
 		logger.debug(" inventory sql:" + sql);
 		
 		return jdbcTemplate.query(sql.toString(), new InventoryMapper());
@@ -50,7 +50,7 @@ public class PivotTableDao {
 		StringBuffer sql = new StringBuffer();
 		sql.append(" match (s:stock) -[:buy]-> (c:customer)  ");
 		sql.append(" where s.soldDate >= " + params.getStartDate().getTime() + " and s.soldDate < " + params.getEndDate().getTime());
-		sql.append(" return distinct c.customerName as customerName, s.soldCurrency as soldCurrency, sum(s.soldPrice) as spending ");
+		sql.append(" return distinct c.customerName as customerName, s.soldCurrency as soldCurrency, sum(s.soldPrice) as spending order by spending desc");
 		logger.debug(" customerSpending sql:" + sql);
 		
 		return jdbcTemplate.query(sql.toString(), new CustomerSpendingMapper());

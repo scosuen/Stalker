@@ -158,13 +158,9 @@ public class OriginalDataBll {
 					brandNProduct.setProduct(row.getCell(2).getStringCellValue().trim());
 					if (originalDataDao.queryBrandProductCount(brandNProduct) <= 0) 
 						return "Brand:" + brandNProduct.getBrand() + " Product:" + brandNProduct.getProduct() + " is not in stock";
-					
-					//insert customer
-					String customerName = row.getCell(3).getStringCellValue();
-					
 	
 					//validate quantity
-					Long quantitiy = (long) row.getCell(6).getNumericCellValue();
+					Long quantitiy = (long) row.getCell(5).getNumericCellValue();
 					if (quantitiy <= 0)
 						return "line:" + rowNum + " quantity is not currect.";
 	
@@ -174,9 +170,9 @@ public class OriginalDataBll {
 						stock.setSoldDate(row.getCell(0).getDateCellValue());
 						stock.setBrand(row.getCell(1).getStringCellValue().trim());
 						stock.setProduct(row.getCell(2).getStringCellValue().trim());
-						stock.setCustomerName(row.getCell(3).getStringCellValue().trim());
-						stock.setSoldPrice(new BigDecimal(row.getCell(4).getNumericCellValue()));
-						stock.setSoldCurrency(row.getCell(5).getStringCellValue().trim());
+						stock.setSoldPrice(new BigDecimal(row.getCell(3).getNumericCellValue()));
+						stock.setSoldCurrency(row.getCell(4).getStringCellValue().trim());
+						stock.setCustomerName(row.getCell(6).getStringCellValue().trim());
 						stock.setTrackingInfo(getNullableCellStringValue(row.getCell(7)));
 						stock.setDeliveredMemo(getNullableCellStringValue(row.getCell(8)));
 						stock.setSoldBy(user.getUserName());

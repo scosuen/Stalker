@@ -1,18 +1,29 @@
 # Overview
-Stalker is a simple inventory management system. It can help you to calculate gross profit, turnover.
+stalker is an inventory management system that helps users statistics stock quantity of each product,  calculate profits and total profits statistics, and each customer's spending
 
 # Technologies
-This is the RESTFul API server said
+This is the RESTFul API server said project, using spring annotation configuration.
 
 Tech Stack:
 * Database: [neo4j](http://neo4j.com/)
 * MVC: [spring](https://spring.io/) 
+* Restful API
 
 # Features
 * Statistics inventory
 * Statistics customer spending
 * Statistics profit
 * Statistics every product sales and profits
+
+# Development tools
+* eclipse
+* maven
+* postman
+
+# Deploy
+* jdk 8
+* tomcat
+
 
 # Screenshots
 |  |   |   |

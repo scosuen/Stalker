@@ -1,8 +1,8 @@
 # Overview
-stalker is an inventory management system that helps users statistics stock quantity of each product,  calculate profits and total profits statistics, and each customer's spending.
+Stalker is an inventory management system that helps users statistics stock quantity of each product,  calculate profits and total profits statistics, and each customer's spending.
 
 # Technologies
-This is the RESTFul API server said project, using spring annotation configuration.
+This is the RESTFul API server said project using spring annotation configuration.
 
 Tech Stack:
 * Database: [neo4j](http://neo4j.com/)

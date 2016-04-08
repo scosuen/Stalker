@@ -1,5 +1,5 @@
 # Overview
-stalker is an inventory management system that helps users statistics stock quantity of each product,  calculate profits and total profits statistics, and each customer's spending
+stalker is an inventory management system that helps users statistics stock quantity of each product,  calculate profits and total profits statistics, and each customer's spending.
 
 # Technologies
 This is the RESTFul API server said project, using spring annotation configuration.
@@ -10,20 +10,19 @@ Tech Stack:
 * Restful API
 
 # Features
-* Statistics inventory
-* Statistics customer spending
-* Statistics profit
-* Statistics every product sales and profits
+* Statistics product inventory.
+* Statistics total spending for per customer.
+* Statistics total turnover, total cost and profit.
+* Statistics single product profit, the average purchase price and the average selling price.
 
 # Development tools
-* eclipse
-* maven
-* postman
+* Eclipse
+* Maven
+* Postman
 
 # Deploy
 * jdk 8
-* tomcat
-
+* Tomcat
 
 # Screenshots
 |  |   |   |
